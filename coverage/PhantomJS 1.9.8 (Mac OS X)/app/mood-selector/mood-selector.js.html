@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/mood-selector/mood-selector.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../prettify.css">
+
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">app/mood-selector/mood-selector.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">94.87% <small>(37 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">100% <small>(4 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">91.67% <small>(11 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">94.87% <small>(37 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/mood-selector/</a> &#187; mood-selector.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">46</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function (App) {
+    'use strict';
+&nbsp;
+    var MoodSelector = function (view) {
+        var templateId = 'mood-selector/mood-selector.html',
+            template = document.getElementById(templateId),
+            tempDiv = document.createElement('div');
+&nbsp;
+        tempDiv.innerHTML = template.innerHTML;
+&nbsp;
+        this.view = tempDiv.firstChild;
+        this.viewClass = this.view.className;
+&nbsp;
+        view.appendChild(this.view);
+&nbsp;
+        this.initPlugins();
+        this.bindEvents();
+    };
+&nbsp;
+    MoodSelector.prototype.plugin = {};
+    MoodSelector.prototype.plugins = {};
+&nbsp;
+    MoodSelector.prototype.bindEvents = function () {
+        var buttons = this.view.querySelector('.content').getElementsByTagName('button'),
+            buttonsLength = buttons.length,
+            i;
+&nbsp;
+        for (i = 0; i &lt; buttonsLength; i++) {
+            buttons[i].addEventListener('click', this.onMoodSelect.bind(this));
+        }
+    };
+&nbsp;
+    MoodSelector.prototype.onMoodSelect = function (event) {
+        var target = event.currentTarget,
+            parent = target.parentNode,
+            className = parent.className;
+&nbsp;
+        this.view.className = this.viewClass + ' ' + className + '-mood';
+&nbsp;
+        parent.appendChild(this.plugin.sentimentBox.template);
+&nbsp;
+        this.parent.utils.ajax.post({
+            url: this.parent.config.API + '/api/vote',
+            data: {
+                vote: className
+            },
+            success: this.onMoodSelectSuccess.bind(this),
+            loader: false
+        });
+    };
+&nbsp;
+    MoodSelector.prototype.onMoodSelectSuccess = function (data) {
+         this.plugin.sentimentBox.setId(data.id);
+    };
+&nbsp;
+    MoodSelector.prototype.goBack = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >       this.view.className = this.viewClass;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >       this.plugin.sentimentBox.remove();</span>
+    };
+&nbsp;
+    MoodSelector.prototype.initPlugins = function () {
+        Object.keys(this.plugins).forEach(function (pluginName) {
+            var moduleName = pluginName.charAt(0).toLowerCase() + pluginName.slice(1);
+            this.plugin[moduleName] = new this.plugins[pluginName](this);
+            this.plugin[moduleName].parent = this;
+        }.bind(this));
+    };
+&nbsp;
+    MoodSelector.prototype.destroyPlugins = function () {
+        Object.keys(this.plugin).forEach(function (pluginName) {
+            this.plugin[pluginName].destroy &amp;&amp; this.plugin[pluginName].destroy();
+        }.bind(this));
+    };
+&nbsp;
+    MoodSelector.prototype.loader = function (show) {
+        var action = show ? 'add' : 'remove';
+&nbsp;
+        this.view.classList[action]('in-progress');
+    };
+&nbsp;
+    MoodSelector.prototype.destroy = function () {
+        this.destroyPlugins();
+    };
+&nbsp;
+    App.prototype.controllers.MoodSelector = MoodSelector;
+}(window.App));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 02 2015 16:36:11 GMT+0100 (BST)</div>
+</div>
+
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../sorter.js"></script>
+</body>
+</html>

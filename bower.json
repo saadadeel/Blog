@@ -1,0 +1,23 @@
+{
+  "name": "moodpulse",
+  "version": "0.0.0",
+  "authors": [
+    "Gleb Ryshkov <gryshkov@ebay.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "~2.0.20110126",
+    "fastclick": "~1.0.6"
+  },
+  "devDependencies": {
+    "lesshat": "~3.0.2"
+  }
+}

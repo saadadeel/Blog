@@ -1,0 +1,11 @@
+@happy-color: lighten(#6aee64, 10%);
+@good-color: average(@happy-color, @neutral-color);
+@neutral-color: average(@happy-color, @sad-color);
+@bad-color: average(@sad-color, @neutral-color);
+@sad-color: lighten(#3a5df0, 10%);
+
+@bigScreen: 768px;
+@mediumScreen: 568px;
+@smallScreen: 320px;
+
+@easingOut: cubic-bezier(0.075, 0.82, 0.165, 1);

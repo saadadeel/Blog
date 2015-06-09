@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/mood-selector/quick-stats.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../prettify.css">
+
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">app/mood-selector/quick-stats.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">100% <small>(68 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">85.71% <small>(12 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">100% <small>(14 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">100% <small>(68 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/mood-selector/</a> &#187; quick-stats.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function (App) {
+    'use strict';
+&nbsp;
+    var QuickStats = function (component) {
+        this.component = component;
+&nbsp;
+        this.elements = {
+            statsButton: this.component.view.querySelector('.stats-button'),
+            statsForButtons: this.component.view.querySelector('.quick-stats').getElementsByTagName('button')
+        };
+&nbsp;
+        this.bindEvents();
+    };
+&nbsp;
+    QuickStats.prototype.bindEvents = function () {
+        var statsForButtonsLength = this.elements.statsForButtons.length,
+            i;
+&nbsp;
+        this.elements.statsButton.addEventListener('click', this.onStatsClick.bind(this));
+&nbsp;
+        for (i = 0; i &lt; statsForButtonsLength; i++) {
+            this.elements.statsForButtons[i].addEventListener('click', this.onStatsForButtonClick.bind(this));
+        }
+    };
+&nbsp;
+    QuickStats.prototype.onStatsClick = function () {
+        if (this.opened) {
+            this.reset();
+        } else {
+            this.open('today');
+        }
+    };
+&nbsp;
+    QuickStats.prototype.open = function (period) {
+        var today = new Date(),
+            data = {};
+&nbsp;
+        this.opened = true;
+&nbsp;
+        today.setMinutes(0);
+        today.setHours(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+&nbsp;
+        data.start = today.getTime();
+&nbsp;
+        if (period === 'yesterday') {
+            data.end = data.start;
+&nbsp;
+            today.setDate(today.getDate() - 1);
+            data.start = today.getTime();
+        }
+&nbsp;
+        this.setActiveStatsForButton(period);
+&nbsp;
+        this.parent.parent.utils.ajax.get({
+            url: this.parent.parent.config.API + '/api/statistics/vote/total',
+            data: data,
+            success: this.onStatsClickSuccess.bind(this)
+        });
+    };
+&nbsp;
+    QuickStats.prototype.onStatsClickSuccess = function (data) {
+        this.votes = data.totals;
+        this.total = 0;
+&nbsp;
+        Object.keys(this.votes).forEach(function (key) {
+            this.total += parseInt(this.votes[key]);
+        }.bind(this));
+&nbsp;
+        if (this.opened) {
+            this.animateIn();
+        }
+    };
+&nbsp;
+    QuickStats.prototype.animateIn = function () {
+        var number,
+            percents = 0,
+            percent,
+            bar;
+&nbsp;
+        this.component.view.classList.add('stats-open');
+&nbsp;
+        Object.keys(this.votes).forEach(function (key) {
+            number = parseInt(this.votes[key]);
+            percent = Math.round(number / this.total * 100) || <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+            bar = this.component.view.querySelector('.' + key).querySelector('.bar');
+            percents += percent;
+&nbsp;
+            this.setBarPercent(bar, percent);
+        }.bind(this));
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (this.total) {
+            this.setBarPercent(bar, percent + 100 - percents);
+        }
+    };
+&nbsp;
+    QuickStats.prototype.setBarPercent = function (bar, percent) {
+        bar.style.width = bar.style.height = percent * 0.7 + '%';
+        bar.firstChild.innerHTML = percent + '%';
+    };
+&nbsp;
+    QuickStats.prototype.onStatsForButtonClick = function (event) {
+        var target = event.currentTarget,
+            period = target.getAttribute('data-for');
+&nbsp;
+        if (target.classList.contains('active')) {
+            return;
+        }
+&nbsp;
+        this.open(period);
+    };
+&nbsp;
+    QuickStats.prototype.setActiveStatsForButton = function (period) {
+        var statsForButtonsLength = this.elements.statsForButtons.length,
+            i;
+&nbsp;
+        for (i = 0; i &lt; statsForButtonsLength; i++) {
+            var button = this.elements.statsForButtons[i];
+&nbsp;
+            button.removeAttribute('class');
+&nbsp;
+            if (button.getAttribute('data-for') === period) {
+                button.className = 'active';
+            }
+        }
+    };
+&nbsp;
+    QuickStats.prototype.reset = function () {
+        this.opened = false;
+&nbsp;
+        this.component.view.classList.remove('stats-open');
+&nbsp;
+        Object.keys(this.votes).forEach(function (key) {
+            var bar = this.component.view.querySelector('.' + key).querySelector('.bar');
+            bar.setAttribute('style', '');
+        }.bind(this));
+    };
+&nbsp;
+    App.prototype.controllers.MoodSelector.prototype.plugins.QuickStats = QuickStats;
+}(window.App));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 02 2015 16:36:11 GMT+0100 (BST)</div>
+</div>
+
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../sorter.js"></script>
+</body>
+</html>

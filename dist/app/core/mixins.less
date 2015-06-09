@@ -1,0 +1,32 @@
+.font (@font-weight: 300, @font-size: 1.5rem, @line-height: 1.4, @font-family: ~"'Helvetica Neue', Helvetica, Arial", @color: #333) {
+    font-weight: @font-weight;
+    font-size: @font-size;
+    line-height: @line-height;
+    font-family: @font-family;
+    color: @color;
+}
+
+.hover (@rules) {
+    &:active,
+    .no-touch &:hover {
+        @rules();
+    }
+}
+
+.maxMediumScreen(@styleSet) {
+    @media (max-width: @mediumScreen) {
+        @styleSet();
+    }
+}
+
+.maxBigScreen(@styleSet) {
+    @media (max-width: @bigScreen) {
+        @styleSet();
+    }
+}
+
+.minBigScreen(@styleSet) {
+    @media (min-width: (@bigScreen + 1)) {
+        @styleSet();
+    }
+}

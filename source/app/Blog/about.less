@@ -1,0 +1,68 @@
+.about_active{
+	.pic{
+		position: absolute;
+		display: block;
+		float: left;
+
+		left: 18.5%;
+
+		.opacity(1);
+
+		z-index: 1;
+	}
+
+	@font-face {
+	    font-family: Slimjoe;
+	    src: url(Slimjoe.otf);
+	}
+
+	.about{
+		position: absolute;
+		display: block;
+		float: left;
+
+		top: 8rem;
+		left: 22.5%;
+
+		padding: 3rem 3rem;
+
+		height: 55%;
+		width: 50%;
+
+		border: 1px solid #e74c3c;
+
+
+		font-size: 1.6rem;
+
+		font-family: Helvetica;
+
+		heading{
+
+			@fontsize: 4rem;
+
+			h1{
+			    display: block;
+
+			    font-family: Slimjoe;
+		    	text-align: center;
+
+			    font-size: @fontsize;
+			    padding: 3rem 1rem;
+		    }
+	    }
+	    
+	    p{
+		    margin-bottom: 1.9rem
+		}
+	}
+}
+
+.about_inactive{
+	font-size: 0rem;
+
+	.pic{
+		float: left;
+		.opacity(0);
+		
+	}
+}
