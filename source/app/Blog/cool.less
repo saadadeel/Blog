@@ -138,7 +138,7 @@
 	padding:0;
     margin:0;
 
-    top:10%;
+    top:8%;
     left:0;
 
     width: 100%;
@@ -198,5 +198,125 @@
 			}
 	  		
   		}
+	}
+
+	.log_active{
+		position: absolute;
+		font-size: 8px;
+		display: inline-block;
+
+		top: 4%;
+		left: 20%;
+
+		background: white;
+
+		padding-left: 10rem;
+		padding-top: 3rem;
+
+		.opacity(1);
+
+		.transition(opacity 1s ease-in);
+
+		.main{
+			position: relative;
+			display: inline-block;
+
+			height: auto;
+			width: 110rem;
+
+			text-align: left;
+			font-size: 0rem;
+
+			.transition(height 600ms ease);
+
+			.blog{
+				display: inline-block;
+
+				width: 68rem;
+				font-size: 1.6rem;
+
+				margin-bottom: 6rem;
+
+				font-family: Helvetica;
+
+				heading{
+
+					@fontsize: 2.4rem;
+					width: 100%;
+
+					h1{
+					    display: block;
+
+					    font-family: Slimjoe;
+				    	text-align: left;
+
+				    	padding-bottom: 0.3rem;
+
+				    	margin-bottom: 3rem;
+
+				    	text-decoration: italic;
+
+				    	color: #e74c3c;
+
+					    font-size: @fontsize;
+				    }
+
+				    date{
+				    	display: block;
+				    	text-align: right;
+
+				    	font-size: 2rem;
+				    	color: #e74c3c;
+
+				    	border-bottom: 1px solid #20374d;
+				    	margin-bottom: 3rem;
+				    }
+			    }
+			    
+			    p{
+				    margin-bottom: 1.9rem
+				}
+			}
+
+		}		
+
+	}
+	.twitter{
+		position: absolute;		
+		display: inline-block;
+
+		margin-left: 70%;
+
+		width: 40rem;
+		height: 40rem;
+
+		heading{
+
+			@fontsize: 2.4rem;
+			width: 100%;
+
+			h1{
+				position: fixed;
+			    display: block;
+
+			    float: left;
+
+			    font-family: Slimjoe;
+		    	padding-bottom: 0.3rem;
+
+		    	padding-right: 15rem;
+
+		    	margin-bottom: 3rem;
+			    font-size: 0rem;
+
+			    border-bottom: 1px solid #e74c3c;
+
+			    li{
+			    	display: inline-block;
+			    	padding-right: 2rem;
+			    }
+
+		    }
+	    }		
 	}
 }

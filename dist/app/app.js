@@ -11,7 +11,7 @@ var App = function (options) {
     this.view.innerHTML = template.innerHTML;
 
     App.bindEvents();
-    //App.onBlog();
+    App.onBlog();
 };
 
 App.bindEvents = function (){
@@ -33,11 +33,9 @@ App.bindEvents = function (){
 
 				template = document.getElementById(templateId);
 		    
-			    this.view = document.getElementById('log');
+			    this.view = document.getElementById('cool');
 
 				this.view.innerHTML = template.innerHTML;
-
-        	$('#log').fadeToggle('slow');
 
         });
 }
@@ -47,7 +45,14 @@ App.onProjects = function(event){
 }
 
 App.onBlog = function(event){
-	new Blog();
+	
+        	var templateId = 'Blog/blog.html',
+
+				template = document.getElementById(templateId);
+		    
+			    this.view = document.getElementById('cool');
+
+				this.view.innerHTML = template.innerHTML;
 }
 
 App.onAbout = function (event){
