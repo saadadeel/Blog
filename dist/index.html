@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
+        <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
         <title>Saad</title>
 
         <link rel="stylesheet" href="app/app.css">
@@ -17,16 +17,15 @@
 
         
 		<script src="app/lib/fastclick/lib/fastclick.js"></script>
-		<script src="app/Blog/about.js"></script>
 		<script src="app/Blog/blog.js"></script>
-		<script src="app/Blog/contacts.js"></script>
-		<script src="app/Blog/projects.js"></script>
+		<script src="app/Blog/game.js"></script>
 		<script src="app/app.js"></script>
+		<script src="app/backend/backend.js"></script>
+		<script src="app/backend/twitter.js"></script>
 		<script src="app/core/config.js"></script>
 		<script src="app/core/utils/ajax.js"></script>
-        <script id="Blog/about.html" type="text/template">	<div id="aboutPage">
+        <script id="Blog/about.html" type="text/template"><div id="aboutPage" class = "about_inactive">
 	<div class="pic">
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="180" width="180" viewBox="0 0 874 874"><polygon points="257,2.441559 617,2.441559 871.558441,257 871.558441,617 617,871.558441 257,871.558441 2.441559,617 2.441559,257" fill="white" stroke="black" stroke-width="6"/></svg>
 	</div>
 	<div class="about">
 			<heading>
@@ -40,48 +39,37 @@
 				3D fold effects are pretty popular nowadays, mostly because they have been integrated quite often in mobile apps. A beautiful example is the iOS Peek Calendar app. Thanks to CSS3 transformation and transitions, we can create a similar interaction in the browser!
 			</p>
 	<div>
-</div></script><script id="Blog/blog.html" type="text/template"><section id="log" class="log_active">
-<div class="main">
-	<div class='twitter'>
-<heading>
-<h1>
-	<ul>
-	<a href = #>
-		<li id="twitter">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 64 64">
-				<path d="M32 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zM47.905 23.843c0.016 0.352 0.024 0.706 0.024 1.062 0 10.844-8.254 23.349-23.349 23.349-4.634 0-8.948-1.359-12.58-3.687 0.642 0.076 1.295 0.115 1.958 0.115 3.845 0 7.383-1.312 10.192-3.513-3.591-0.066-6.622-2.439-7.666-5.699 0.501 0.096 1.015 0.148 1.544 0.148 0.748 0 1.474-0.101 2.162-0.288-3.754-0.754-6.583-4.071-6.583-8.047 0-0.035 0-0.069 0.001-0.103 1.106 0.615 2.372 0.984 3.717 1.026-2.202-1.472-3.651-3.983-3.651-6.831 0-1.504 0.405-2.914 1.111-4.126 4.048 4.965 10.094 8.232 16.915 8.574-0.14-0.601-0.212-1.227-0.212-1.87 0-4.532 3.675-8.206 8.206-8.206 2.36 0 4.493 0.997 5.99 2.591 1.869-0.368 3.626-1.051 5.211-1.991-0.613 1.916-1.914 3.525-3.608 4.54 1.66-0.198 3.242-0.639 4.713-1.292-1.1 1.645-2.491 3.091-4.095 4.248z" fill="#e74c3c">
-				</path>
-			</svg>
-		</li>
-	</a> 
-	<a href = #>
-		<li id="youtube">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 64 64">
-				<path d="M18.324 0l-4.324 8.577-4.324-8.577h-5.516l7.794 13.582 0.045-0.027v10.445h4v-10.445l0.045 0.027 7.794-13.582z" fill="#e74c3c"></path>
-				<path d="M30 8c1.084 0 2 0.916 2 2v8c0 1.084-0.916 2-2 2s-2-0.916-2-2v-8c0-1.084 0.916-2 2-2zM30 4c-3.3 0-6 2.7-6 6v8c0 3.3 2.7 6 6 6s6-2.7 6-6v-8c0-3.3-2.7-6-6-6v0z" fill="#e74c3c"></path>
-				<path d="M48 4v15.748c-1.745 1.456-4 2.333-4-2.852v-12.896h-4v13.708h0.006c0.062 3.307 0.759 9.261 7.994 4.419v1.873h4v-20h-4z" fill="#e74c3c"></path>
-				<path d="M54 44c-1.103 0-2 0.897-2 2v2h4v-2c0-1.103-0.897-2-2-2z" fill="#e74c3c"></path>
-				<path d="M36 46v10.5c1.354 1.354 4 1.5 4-0.5s0-7.375 0-9.375-2-2.625-4-0.625z" fill="#e74c3c"></path>
-				<path d="M63.673 36.346c-0.175-2.304-1.003-4.184-2.486-5.64s-3.38-2.25-5.692-2.38c-4.361-0.217-14.341-0.326-23.107-0.326s-19.456 0.109-23.817 0.326c-2.312 0.13-4.209 0.924-5.692 2.38s-2.312 3.336-2.486 5.64c-0.262 4.695-0.393 6.397-0.393 8.744s0.131 5.868 0.393 10.563c0.174 2.304 1.003 4.184 2.486 5.64s3.38 2.249 5.692 2.38c4.361 0.217 15.051 0.326 23.817 0.326s18.746-0.109 23.107-0.326c2.312-0.13 4.209-0.924 5.692-2.38s2.312-3.336 2.486-5.64c0.218-3.912 0.327-7.433 0.327-10.563s-0.109-4.832-0.327-8.744zM12 60h-4v-20h-4v-4h12v4h-4v20zM28 60h-4v-1.873c-7.604 4.268-7.932 0.137-7.994-3.169h-0.006v-10.958h4v11.021c0 2.417 2.255 2.183 4 0.727v-11.748h4v16zM44 55.943c0 4.181-4.282 5.4-8 2.149v1.908h-4v-24h4v6.5c4-4 8-2.5 8 1.5s0 7.573 0 11.943zM60 48v2h-8v4c0 1.103 0.897 2 2 2s2-0.897 2-2v-2h4v2c0 3.308-2.692 6-6 6s-6-2.692-6-6v-8c0-3.308 2.692-6 6-6s6 2.692 6 6v2z" fill="#e74c3c">
-				</path>
-			</svg>
-		</li>
-	</a>
-	<a href = #>
-						<li id="facebook">
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 64 64">
-								<path d="M32 0c-17.673 0-32 14.327-32 32s14.327 32 32 32v-24h-8v-8h8v-6c0-5.523 4.477-10 10-10h10v8h-10c-1.105 0-2 0.895-2 2v6h11l-2 8h-9v22.992c13.802-3.552 24-16.081 24-30.992 0-17.673-14.327-32-32-32z" fill="#e74c3c">
-								</path>
-							</svg>
-						</li>
-					</a> 
-	</ul>
-</h1>
-</heading>
-</div>
+	<div id="quote">
+		Rise early, word hard, strike gold.
+	</div>
+</div></script><script id="Blog/blog.html" type="text/template"><section id="blogPage" class="blog_inactive">
+<div id="page" class="main">
 	<div class="blog">
+		<div class='content'>
+		<heading>
+			<h1>This blog</h1>
+			<div class='date'>12/07/2015</div>
+		</heading>
+		<p>
+			Took me a while to complete this project, not because it was complex but because it went throught so many iterations. From having the nav on the side to even having a twitter feed on the blogs page, wish there was someone to impose a deadline for me. It was made using Vanilla Javascript and grunt as the build tool. As mentioned before the development process of this blog took a few detours which allowed me explore node.js, express, and socket.io, which I do not regret. At some point I will put my code on github for all programmers to ridicule.
+		</p>
+		<p>
+			So what is this blog for. Just a place for me to ramble about things I come across I guess, could be technichal or otherwise. Could be anything from a movie review to an article about why I like to use REMs insteasd of pixels. I would also like to use this place to give updates on projects I am working on. 
+		</p>
+		<p>
+			I would like to add a home page for this website soon, also maybe some filters for the blog page and also a projects page. If this site somehow through some miracle starts getting some attention I might even add the ability for users to add comments to my posts.
+		</p>
+		<p>
+			Cool, lets see where this blog goes.
+		</p>
+	</div>
+	</div>
+
+	<div class="blog">
+		<div class='content'>
 		<heading>
 			<h1>CSS</h1>
+			<div class='date'>07/07/2015</div>
 		</heading>
 		<p>
 			3D fold effects are pretty popular nowadays, mostly because they have been integrated quite often in mobile apps. A beautiful example is the iOS Peek Calendar app. Thanks to CSS3 transformation and transitions, we can create a similar interaction in the browser!
@@ -94,51 +82,39 @@
 		<p>
 			On mobile, we animate only the right fold (.left-fold element has a display: none): by default, the .cd-folding-panel (and its child .right-panel) has a position fixed and covers the entire viewport (but its visibility is set to hidden), while the .right-panel::after is translated to the left and rotated (translateX(-100%)  rotateY(-90deg), with transform-origin: right center).
 		</p>
+		<p>
 			When user clicks one of the .cd-item, the .cd-main content is translated to the right (using the .fold-is-open class), while the .right-fold::after is 	translated into the viewport and rotated back (using the .is-open class assigned to the .cd-folding-panel).
+		</p>
+	</div>
 	</div>
 
 	<div class="blog">
+		<div class='content'>
 		<heading>
 			<h1>JavaScript</h1>
+			<div class='date'>07/07/2015</div>
 		</heading>
 		<p>
 			On desktop devices (viewport width > 1100px), both ::after pseudo-elements are animated: the .cd-folding-panel is now placed in the center of the viewport (width: 800px), the .left-panel and .right-panel have a float: left and width equal to half of their parent (400px). Their ::after pseudo-elements are both rotated (rotateY(-90deg)) and translated to the left (.left-panel::after – translateX(100%)) or to the right (.right-panel::after – translateX(-100%)).
 			When user clicks one of the .cd-item, they are translated to the left (:nth-of-type(2n+1)) or to the right (:nth-of-type(2n)), while both ::after pseudo-elements are translated and rotated back (rotateY(0) translateX(0)).
 		</p>
 	</div>
+	</div>
 
 	<div class="blog">
+		<div class='content'>
 		<heading>
-			<h1>Scala</h1>	
+			<h1>Scala</h1>
+			<div class='date'>12/07/2015</div>
 		</heading>
 		<p>
 			On desktop devices (viewport width > 1100px), both ::after pseudo-elements are animated: the .cd-folding-panel is now placed in the center of the viewport (width: 800px), the .left-panel and .right-panel have a float: left and width equal to half of their parent (400px). Their ::after pseudo-elements are both rotated (rotateY(-90deg)) and translated to the left (.left-panel::after – translateX(100%)) or to the right (.right-panel::after – translateX(-100%)).
 			When user clicks one of the .cd-item, they are translated to the left (:nth-of-type(2n+1)) or to the right (:nth-of-type(2n)), while both ::after pseudo-elements 	are translated and rotated back (rotateY(0) translateX(0)).
 		</p>
 	</div>
-</div>
-</section></script><script id="Blog/main.html" type="text/template"><section id="cool" class="cool_active">
-
-</section>
-<section id="topBackGround" class="topBackGround_active">
-	<div class="menu">
-		<ul>
-			<a><li class = "topMenuBar" id="projects">01. Projects</li></a> 
-			<a><li class = "topMenuBar"id="blog">02. Blog</li></a>
-			<a><li class = "topMenuBar"id="about">03. About</li></a>
-			<a><li class = "topMenuBar"id="contacts">04. Contact</li></a>
-		</ul>
 	</div>
-</section>
-<section id="log" class="log_active">
-</section></script><script id="Blog/projects.html" type="text/template"><div id="projectsPage" class="projects_inactive">
-	<script type="text/javascript"> 
-		$("#ppp").click( function () {
-			$(this).set() = "dafaefaefqefqe";
-		}
-	</script>
 </div>
-</script><script id="Blog/social.html" type="text/template"><div class="icons">
+</section></script><script id="Blog/contacts.html" type="text/template"><div id="contactsPage" class = "contacts_inactive">
 	<ul>
 		<a href = #>
 			<li id="mail">
@@ -201,10 +177,78 @@
 			</li>
 		</a> 
 	</ul>
-</div></script>
+</div></script><script id="Blog/home.html" type="text/template"><section id="homePage" class="home_inactive">
+	<div id="myPage">
+		<heading>
+			This Week...
+		</heading>
+		<div class='activity'><h1>Listening...</h1>
+		<p>Currents - Tame Impala</p>
+		<p>Hollywood - RAC</p>
+		<p>Interstellar OST</p></div>
+		<div class='activity'><h1>Watching...</h1
+		><p>The Thick of It</p>
+		<p>Elon Musk videos</p>
+		<p>Tokyo Ghoul</p>
+		</div>
+		<div class='activity'><h1>Reading...</h1
+		><p>JavaScript: The Good Parts - Douglas Crockford</p>
+		</div>
+	</div>
+</section></script><script id="Blog/main.html" type="text/template"><section id="cool" class="cool_active">
 
+</section>
+<section id="topBackGround" class="topBackGround_sideways">
+	<div class="menu">
+		<ul>
+			<a><li class = "topMenuBar"id="home">Home</li></a>
+			<a><li class = "topMenuBar"id="blog">Blog</li></a>
+			<a><li class = "topMenuBar"id="about">About</li></a>
+			<a><li class = "topMenuBar"id="contacts">Contact</li></a>
+		</ul>
+	</div>
+</section></script><script id="Blog/projects.html" type="text/template"><div id="projectsPage" class="projects_inactive">
+
+</div>
+</script><script id="Blog/texts/something.html" type="text/template"><div class="blog">
+	<div class='date'>01/07/2015 <p> Technical</p> <p>Projects </p> </div>
+	<div class='content'>
+	<heading>
+		<h1>This blog</h1>
+	</heading>
+	<p>
+		Took me a while to complete this project, not because it was complex but because it went throught so many iterations. From having the nav on the side to even having a twitter feed on the blogs page, wish there was someone to impose a deadline for me. It was made using Vanilla Javascript and grunt as the build tool. As mentioned before the development process of this blog took a few detours which allowed me explore node.js, express, and socket.io, which I do not regret. At some point I will put my code on github for all programmers to ridicule.
+	</p>
+	<p>
+		So what is this blog for. Just a place for me to ramble about things I come across I guess, could be technichal or otherwise. Could be anything from a movie review to an article about why I like to use REMs insteasd of pixels. I would also like to use this place to give updates on projects I am working on. 
+	</p>
+	<p>
+		I would like to add a home page for this website soon, also maybe some filters for the blog page and also a projects page. If this site somehow through some miracle starts getting some attention I might even add the ability for users to add comments to my posts.
+	</p>
+	<p>
+		Cool, lets see where this blog goes.
+	</p>
+</div></script><script id="backend/test.html" type="text/template"><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Blog">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <title>Saad</title>
+
+        <link rel="stylesheet" href="app/app.css">
+    </head>
+    <body>
+    </body>
+</html></script>
+        
         <script>
-            new App(window);
+        new App(window);
+              </script>
         </script>
     </body>
 </html>

@@ -8,12 +8,101 @@
 
 		.opacity(1);
 
+		.transition(opacity 0.5s ease-in);
+
 		z-index: 1;
+
+		height: 180px;
+		width: 180px;
+
+		background: url("") no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;;	
 	}
 
-	@font-face {
-	    font-family: Slimjoe;
-	    src: url(Slimjoe.otf);
+	.about{
+		position: absolute;
+		display: block;
+		float: left;
+
+		top: 8rem;
+		left: 22.5%;
+
+		padding: 3rem 0rem;
+
+		height: auto;
+		width: 50%;
+
+		font-size: 1.6rem;
+
+		text-align: center;
+
+		font-family: Helvetica;
+
+		.transition(opacity 1s ease-in);
+
+		heading{
+
+			h1{
+			    display: block;
+
+			    font-family: bigjohn;
+		    	text-align: center;
+
+		    	color: @orange;
+
+			    font-size: 4rem;
+			    padding: 3rem 1rem;
+
+			    .transition(opacity 1s ease-in);
+		    }
+	    }
+	    
+	    p{
+		    margin-bottom: 1.9rem
+		}
+	}
+
+	#quote{
+		position: relative;
+		display: block;
+		float: left;
+
+		background: black;
+
+		top: 8rem;
+
+		padding: 3rem 0rem;
+
+		height: auto;
+		width: 100%;
+
+		text-align: center;
+
+		font-size: 3rem;
+
+		font-family: bigjohn;
+
+		color: @orange;
+
+		.transition(opacity 1s ease-in);
+
+	}
+}
+
+.about_inactive{
+	.pic{
+		position: absolute;
+		display: block;
+		float: left;
+
+		left: 18.5%;
+
+		.opacity(0);
+
+		z-index: 1;
 	}
 
 	.about{
@@ -32,37 +121,19 @@
 		border: 1px solid #e74c3c;
 
 
-		font-size: 1.6rem;
+		.opacity(0);
 
 		font-family: Helvetica;
 
 		heading{
 
-			@fontsize: 4rem;
-
 			h1{
-			    display: block;
-
-			    font-family: Slimjoe;
-		    	text-align: center;
-
-			    font-size: @fontsize;
-			    padding: 3rem 1rem;
+			    .opacity(0);
 		    }
 	    }
 	    
 	    p{
 		    margin-bottom: 1.9rem
 		}
-	}
-}
-
-.about_inactive{
-	font-size: 0rem;
-
-	.pic{
-		float: left;
-		.opacity(0);
-		
 	}
 }

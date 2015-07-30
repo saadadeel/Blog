@@ -11,58 +11,35 @@ var App = function (options) {
     this.view.innerHTML = template.innerHTML;
 
     App.bindEvents();
-    App.onBlog();
 };
 
 App.bindEvents = function (){
-	var projectsButton = document.getElementById('projects'),
-		//blogButton = document.getElementById('blog'),
-		aboutButton = document.getElementById('about'),
-		contactsButton = document.getElementById('contacts'),
-		socialButton = document.getElementById('social');
 
-        projectsButton.addEventListener('click', this.onProjects.bind(this));
-        //blogButton.addEventListener('click', this.onBlog.bind(this));
-        aboutButton.addEventListener('click', this.onAbout.bind(this));
-        contactsButton.addEventListener('click', this.onContacts.bind(this));
+	var timeoutID;
 
+    $('.topMenuBar').click( function () {
 
-        $('#blog').click( function () {
+    	var pageName = $(this).attr('id'),
+			templateId = 'Blog/' + pageName + ".html",
+			template = document.getElementById(templateId);
+		    this.view = document.getElementById('cool');
+			this.view.innerHTML = template.innerHTML;
 
-        	var templateId = 'Blog/blog.html',
+			timeoutID = window.setTimeout( function () {
+			document.getElementById(pageName + "Page" ).className = pageName + "_active";
+		}, 10);
 
-				template = document.getElementById(templateId);
-		    
-			    this.view = document.getElementById('cool');
+			
+			if(pageName == "blog"){
+				new Blog();	
+			}
 
-				this.view.innerHTML = template.innerHTML;
+			if(pageName == "home"){
+				 $('.topBackGround_sideways').removeClass('topBackGround_sideways').addClass('topBackGround_homePage');
+			}
 
-        });
-}
-
-App.onProjects = function(event){
-	new Projects();
-}
-
-App.onBlog = function(event){
-	
-        	var templateId = 'Blog/blog.html',
-
-				template = document.getElementById(templateId);
-		    
-			    this.view = document.getElementById('cool');
-
-				this.view.innerHTML = template.innerHTML;
-}
-
-App.onAbout = function (event){
-	new About();
-}
-
-App.onContacts = function(events){
-	new Contacts();
-}
-
-App.onSocial = function (event){
-	
+			else{
+				$('.topBackGround_homePage').removeClass('topBackGround_homePage').addClass('topBackGround_sideways');
+			}
+    });
 }

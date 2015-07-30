@@ -1,0 +1,95 @@
+.topBackGround_sideways{
+	position: absolute;
+	font-size: 1rem;
+	display: block;
+
+  	width: 0%;
+  	height: 100%;
+
+  	background-color: @orange;
+
+  	.transition(width 600ms ease-in);
+
+  	.menu{
+  		position: fixed;
+  		display: block;
+
+  		top: 50%;
+
+  		margin-left: 0%;
+  		.transition(margin 600ms ease-in);
+
+	  	ul{	
+	  		position: absolute;
+	  		display: relative;
+
+	  		width: auto;
+	  		height: auto;
+
+  			a{
+				text-decoration: none;
+				color: @black;
+
+		  		li{
+		  			position: relative;
+		  			display: inline;
+		  			float: right;
+
+		  			background: @orange;
+
+		  			font-weight: bold;
+
+		  			width: 21rem;
+
+		  			font-family: bigjohn;
+
+		  			text-align: right;
+
+		  			height: 2.4rem;
+		  			padding: 1rem 2.4rem;
+
+		  			font-size: 1.4rem;
+		  			border-color: #e74c3c;
+
+		  			margin-top: -50%;
+		  			margin-bottom: 50%;
+
+		  			margin-right: 0%;
+
+		  			.transition(margin-right 600ms ease-in);
+		  		}
+	  		}
+	  		a:hover{
+				text-decoration: none;
+				background: #e74c3c;
+				color: @black;
+
+				li{
+		  			position: relative;
+		  			display: inline;
+		  			float: right;
+
+		  			background: @orange;
+
+		  			font-weight: bold;
+
+		  			width: 21rem;
+
+		  			font-family: bigjohn;
+
+		  			text-align: right;
+
+		  			height: 2.4rem;
+		  			padding: 1rem 2.4rem;
+
+		  			font-size: 1.4rem;
+		  			border-color: #e74c3c;
+
+		  			margin-top: -50%;
+		  			margin-bottom: 50%;
+	  			}
+			}
+	  		
+  		}
+	}
+}

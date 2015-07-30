@@ -1,5 +1,10 @@
+@red: #e74c3c;
+@grey: #e9eaed;
+@black: #191919;
+@orange: #fe7455;
+
 body{
-	background: #ecf0f1;
+	background: white;
 }
 @font-face {
     font-family: Slimjoe;
@@ -11,6 +16,11 @@ body{
     src: url(Supermolot.otf);
 }
 
+@font-face {
+    font-family: bigjohn;
+    src: url(big_john.otf);
+}
+
 .topBackGround_active{
 	position: fixed;
   	display: block;
@@ -19,12 +29,9 @@ body{
   	height: 7%;
 
   	font-size: 0rem;
-  	
-  	background: #ecf0f1;
+  	background: @grey;
 
   	z-index: 2;
-
-  	border-bottom: 1px solid #e74c3c;
 
   	.transition(height 400ms ease-in, width 400ms ease-in, background 400ms ease-in);
 
@@ -37,7 +44,7 @@ body{
 
   		margin-left: auto;
 
-  		margin-right: -10%;
+  		margin-right: -20%;
 
   		float: right;
 
@@ -59,7 +66,7 @@ body{
   			a{
 
 				text-decoration: none;
-				color: #e74c3c;
+				color: @red;
 
 		  		li{
 
@@ -87,7 +94,6 @@ body{
 
 	  		a:hover{
 				text-decoration: none;
-				color: #e74c3c;
 
 		  		li{
 
@@ -95,18 +101,46 @@ body{
 		  			display: inline;
 		  			float: left;
 
-		  			height: 4rem;
+		  			height: 3rem;
 		  			padding: 1rem 2.4rem;
+
+		  			font-weight: bold;
 
 		  			margin-left: 1rem;
 
-		  			font-size: 2rem;
+		  			font-size: 1.7rem;
 
 		  			text-align: right;
 
 		  			.opacity(1);
 
-		  			.transition(font-size 300ms ease-in);
+		  			border-bottom: 1px solid black;
+
+	  			}
+  			}
+  			a:active{
+				text-decoration: none;
+
+		  		li{
+
+		  			position: relative;
+		  			display: inline;
+		  			float: left;
+
+		  			height: 3rem;
+		  			padding: 1rem 2.4rem;
+
+		  			font-weight: bold;
+
+		  			margin-left: 1rem;
+
+		  			font-size: 1.7rem;
+
+		  			text-align: right;
+
+		  			.opacity(1);
+
+		  			border-bottom: 1px solid black;
 
 	  			}
   			}	

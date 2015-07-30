@@ -1,20 +1,41 @@
 'use strict';
 
-var Blog = function (options) {
-	var templateId = 'Blog/blog.html',
-		timeoutID,
-		template = document.getElementById(templateId);
-    
-	    options = options || {};
-	    this.view = document.getElementById('log');
-
-	this.view.innerHTML = template.innerHTML;
-
-	timeoutID = window.setTimeout( function () {
-		document.getElementById('cool').className = "cool_inactive"; 
-		document.getElementById('log').className = "log_active";
-		document.getElementById('topBackGround').className = "topBackGround_active";
-		document.getElementById('aboutPage').className = "about_inactive";
-		document.getElementById('projectsPage').className = "projects_inactive";}, 10)
+var Blog = function () {
+	var socket= io.connect('http://localhost:3000');
+	Blog.prototype.getBlogs(socket);
 
 };
+
+Blog.prototype.getStream = function (topic){
+
+	var socket= io.connect('http://localhost:3000');
+
+	socket.on('messages', function (data){
+		console.log(data);
+	});
+
+	socket.emit('tweet', {topic: 'Mad Max'});
+
+	var idNumber = 0;
+
+	socket.on('stream', function (data){
+		console.log("received");
+		console.log(idNumber);
+		$("#tweets").append("<div id=" + idNumber + " 		class='aTweet'>hello world</div>")
+		document.getElementById(idNumber).innerHTML = data;
+		idNumber = idNumber + 1;
+	});
+}
+
+Blog.prototype.getTags = function (topic) {
+
+}
+
+Blog.prototype.getBlogs = function (socket) {
+	socket.emit('getEntry', 'call');
+
+	socket.on('entry', function (data){
+		$(".main").empty();
+		$(".main").append(data);
+	});
+}
